@@ -61,6 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				/* BluePulse Color Palette */
+				sky: {
+					light: 'hsl(var(--sky-light))',
+					mid: 'hsl(var(--sky-mid))',
+					deep: 'hsl(var(--sky-deep))'
+				},
+				ocean: {
+					surface: 'hsl(var(--ocean-surface))',
+					mid: 'hsl(var(--ocean-mid))',
+					deep: 'hsl(var(--ocean-deep))',
+					abyss: 'hsl(var(--ocean-abyss))'
+				},
+				data: {
+					primary: 'hsl(var(--data-primary))',
+					secondary: 'hsl(var(--data-secondary))',
+					accent: 'hsl(var(--data-accent))',
+					warning: 'hsl(var(--data-warning))'
 				}
 			},
 			borderRadius: {
