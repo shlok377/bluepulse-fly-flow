@@ -27,7 +27,7 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-ocean-abyss via-ocean-deep to-ocean-mid">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background/30" />
         
-        <div className="container mx-auto px-12 text-center z-10 relative">
+        <div className="container mx-auto px-24 text-center z-10 relative">
           <div className="space-y-8 max-w-4xl mx-auto">
             <div className="inline-block px-6 py-3 glass-card text-sm font-mono text-data-primary">
               Immersive Environmental Data Visualization
@@ -77,7 +77,7 @@ const Index = () => {
       
       {/* Footer */}
       <footer className="py-12 bg-ocean-abyss text-center">
-        <div className="container mx-auto px-12">
+        <div className="container mx-auto px-24">
           <div className="glass-card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-foreground">Data Sources</h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">

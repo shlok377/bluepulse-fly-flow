@@ -23,7 +23,7 @@ const CoastalSection = () => {
     >
       <ParticleField density={30} type="water" />
       
-      <div className="container mx-auto px-6 z-10 relative">
+      <div className="container mx-auto px-24 z-10 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <SectionHeader 

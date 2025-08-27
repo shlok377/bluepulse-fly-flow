@@ -37,7 +37,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed right-16 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block group">
+    <nav className="fixed right-2.5 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block group">
       {/* Narrow icon bar */}
       <div className="glass-card w-12 py-4 space-y-4 group-hover:opacity-0 transition-opacity duration-300">
         {sections.map((section, index) => {
