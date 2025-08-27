@@ -14,7 +14,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       sections.forEach((section, index) => {
         const offsetTop = section.offsetTop;
@@ -26,6 +26,7 @@ const Navigation = () => {
       });
     };
 
+    handleScroll(); // Call once on mount to set initial state
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,7 +37,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block group">
+    <nav className="fixed right-16 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block group">
       {/* Narrow icon bar */}
       <div className="glass-card w-12 py-4 space-y-4 group-hover:opacity-0 transition-opacity duration-300">
         {sections.map((section, index) => {
