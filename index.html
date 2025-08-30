@@ -1,24 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bluepulse-fly-flow</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePulse - Atmospheric to Oceanic Journey</title>
+    <meta name="description" content="Experience an immersive journey from jet streams to deep ocean currents with real-time environmental data visualization.">
+    <meta name="author" content="BluePulse">
+    
+    <meta property="og:title" content="BluePulse - Atmospheric to Oceanic Journey">
+    <meta property="og:description" content="Experience an immersive journey from jet streams to deep ocean currents with real-time environmental data visualization.">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+    
+    <!-- Navigation Sidebar -->
+    <nav id="navigation" class="navigation">
+        <div class="nav-icons">
+            <button class="nav-button" data-section="0">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.5 12a5.5 5.5 0 0 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm-11-4v9a1 1 0 0 0 1 1h2V9h-2a1 1 0 0 0-1 1zm-4-6v15a1 1 0 0 0 1 1h2V4h-2a1 1 0 0 0-1 1z"/>
+                </svg>
+            </button>
+            <button class="nav-button" data-section="1">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.5 12a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM17 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-5-4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+                </svg>
+            </button>
+            <button class="nav-button" data-section="2">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm4.5-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>
+                </svg>
+            </button>
+            <button class="nav-button" data-section="3">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L3.09 8.26l1.42 1.42L12 4.84l7.49 4.84 1.42-1.42L12 2zM2 17h20v2H2v-2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="nav-detailed">
+            <button class="nav-detail-button" data-section="0">
+                <div class="nav-detail-content">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.5 12a5.5 5.5 0 0 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm-11-4v9a1 1 0 0 0 1 1h2V9h-2a1 1 0 0 0-1 1zm-4-6v15a1 1 0 0 0 1 1h2V4h-2a1 1 0 0 0-1 1z"/>
+                    </svg>
+                    <div>
+                        <div class="nav-label">Jet Stream</div>
+                        <div class="nav-altitude">40,000 ft</div>
+                    </div>
+                </div>
+            </button>
+            <button class="nav-detail-button" data-section="1">
+                <div class="nav-detail-content">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.5 12a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM17 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-5-4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+                    </svg>
+                    <div>
+                        <div class="nav-label">Atmosphere</div>
+                        <div class="nav-altitude">25,000 ft</div>
+                    </div>
+                </div>
+            </button>
+            <button class="nav-detail-button" data-section="2">
+                <div class="nav-detail-content">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm4.5-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>
+                    </svg>
+                    <div>
+                        <div class="nav-label">Coastal</div>
+                        <div class="nav-altitude">Sea Level</div>
+                    </div>
+                </div>
+            </button>
+            <button class="nav-detail-button" data-section="3">
+                <div class="nav-detail-content">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L3.09 8.26l1.42 1.42L12 4.84l7.49 4.84 1.42-1.42L12 2zM2 17h20v2H2v-2z"/>
+                    </svg>
+                    <div>
+                        <div class="nav-label">Deep Ocean</div>
+                        <div class="nav-altitude">2,000 m below</div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="bluepulse-fly-flow" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        Immersive Environmental Data Visualization
+                    </div>
+                    
+                    <h1 class="hero-title">BluePulse</h1>
+                    
+                    <p class="hero-subtitle">
+                        Journey from the jet stream to the ocean depths and witness how 
+                        atmospheric and oceanic systems dance together in real-time
+                    </p>
+                    
+                    <div class="hero-indicators">
+                        <div class="indicator">
+                            <div class="indicator-dot primary"></div>
+                            <span>Real-time Data</span>
+                        </div>
+                        <div class="indicator">
+                            <div class="indicator-dot accent"></div>
+                            <span>Interactive Journey</span>
+                        </div>
+                        <div class="indicator">
+                            <div class="indicator-dot warning"></div>
+                            <span>Global Coverage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scroll-indicator">
+                        <div class="scroll-text">Scroll to begin your descent</div>
+                        <div class="scroll-arrow">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Jet Stream Section -->
+        <section class="section jet-stream-section" data-bg="jet-stream-bg.jpg">
+            <div class="particles" id="particles-jetstream"></div>
+            <div class="container">
+                <div class="section-grid">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <div class="altitude-badge">Altitude: 30,000-40,000 ft</div>
+                            <h2 class="section-title">The Jet Stream</h2>
+                            <p class="section-subtitle">
+                                High-altitude rivers of fast-moving air that circle the globe, driving weather patterns and connecting atmospheric systems.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-panels">
+                        <div class="data-panel">
+                            <h3 class="panel-title">Jet Stream Dynamics</h3>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <div class="metric-label">Velocity</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="145.8">145.8</span>
+                                        <span class="unit">mph</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Altitude</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="32450">32,450</span>
+                                        <span class="unit">ft</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Mass Transport</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="2.3">2.3M</span>
+                                        <span class="unit">tons/day</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Coverage</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="68.2">68.2</span>
+                                        <span class="unit">%</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-panel">
+                            <h4 class="status-title">Current Status</h4>
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>Monitoring atmospheric patterns...</span>
+                            </div>
+                            <div class="status-description">
+                                The jet stream is currently experiencing moderate variability, with wind speeds 
+                                fluctuating between 120-180 mph across different latitudes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <!-- Atmosphere Section -->
+        <section class="section atmosphere-section" data-bg="atmosphere-bg.jpg">
+            <div class="particles" id="particles-atmosphere"></div>
+            <div class="container">
+                <div class="section-grid reverse">
+                    <div class="section-panels">
+                        <div class="data-panel">
+                            <h3 class="panel-title">Atmospheric Exchange</h3>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <div class="metric-label">PM2.5</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="12.4">12.4</span>
+                                        <span class="unit">μg/m³</span>
+                                        <span class="trend down">↘</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Ozone</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="68.7">68.7</span>
+                                        <span class="unit">ppb</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Pressure</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="1013.2">1013.2</span>
+                                        <span class="unit">hPa</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Visibility</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="15.2">15.2</span>
+                                        <span class="unit">km</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="air-quality-panel">
+                            <h4 class="status-title">Air Quality Index</h4>
+                            <div class="aqi-status">
+                                <span class="aqi-value">Good</span>
+                                <div class="aqi-bars">
+                                    <div class="aqi-bar active"></div>
+                                    <div class="aqi-bar active"></div>
+                                    <div class="aqi-bar"></div>
+                                    <div class="aqi-bar"></div>
+                                    <div class="aqi-bar"></div>
+                                </div>
+                            </div>
+                            <div class="status-description">
+                                Atmospheric conditions are favorable with low particulate matter 
+                                and stable pressure systems.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="section-header text-right">
+                            <div class="altitude-badge">Altitude: 15,000-25,000 ft</div>
+                            <h2 class="section-title">Atmospheric Exchange</h2>
+                            <p class="section-subtitle">
+                                The dynamic layer where air quality, pressure systems, and pollutants interact, directly impacting weather and human health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coastal Section -->
+        <section class="section coastal-section" data-bg="coastal-bg.jpg">
+            <div class="particles" id="particles-coastal"></div>
+            <div class="container">
+                <div class="section-grid">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <div class="altitude-badge">Altitude: Sea Level</div>
+                            <h2 class="section-title">Coastal Waters</h2>
+                            <p class="section-subtitle">
+                                The critical boundary where ocean and atmosphere meet, creating complex interactions that drive regional climate and marine ecosystems.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-panels">
+                        <div class="data-panel">
+                            <h3 class="panel-title">Coastal Dynamics</h3>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <div class="metric-label">Sea Temperature</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="22.8">22.8</span>
+                                        <span class="unit">°C</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Humidity</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="78.5">78.5</span>
+                                        <span class="unit">%</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Wind Speed</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="18.3">18.3</span>
+                                        <span class="unit">km/h</span>
+                                        <span class="trend down">↘</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Wave Height</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="1.8">1.8</span>
+                                        <span class="unit">m</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interface-panel">
+                            <h4 class="status-title">Ocean-Atmosphere Interface</h4>
+                            <div class="interface-grid">
+                                <div class="interface-item">
+                                    <div class="interface-label">Heat Exchange</div>
+                                    <div class="interface-value accent">Active</div>
+                                </div>
+                                <div class="interface-item">
+                                    <div class="interface-label">Evaporation Rate</div>
+                                    <div class="interface-value primary">High</div>
+                                </div>
+                            </div>
+                            <div class="status-description">
+                                Coastal waters are actively exchanging heat and moisture with the atmosphere, 
+                                influencing local weather patterns and marine productivity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ocean Section -->
+        <section class="section ocean-section" data-bg="deep-ocean-bg.jpg">
+            <div class="particles" id="particles-ocean"></div>
+            <div class="container">
+                <div class="section-grid reverse">
+                    <div class="section-panels">
+                        <div class="data-panel">
+                            <h3 class="panel-title">Deep Ocean Currents</h3>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <div class="metric-label">Current Velocity</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="0.85">0.85</span>
+                                        <span class="unit">m/s</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Thermal Energy</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="4.2">4.2</span>
+                                        <span class="unit">PJ/day</span>
+                                        <span class="trend up">↗</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Temperature</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="4.1">4.1</span>
+                                        <span class="unit">°C</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Salinity</div>
+                                    <div class="metric-value">
+                                        <span class="value" data-base="34.8">34.8</span>
+                                        <span class="unit">PSU</span>
+                                        <span class="trend stable">→</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="circulation-panel">
+                            <h4 class="status-title">Thermohaline Circulation</h4>
+                            <div class="circulation-grid">
+                                <div class="circulation-item">
+                                    <span class="circulation-label">Atlantic Meridional</span>
+                                    <span class="circulation-value accent">15.2 Sv</span>
+                                </div>
+                                <div class="circulation-item">
+                                    <span class="circulation-label">Pacific Deep Water</span>
+                                    <span class="circulation-value primary">8.7 Sv</span>
+                                </div>
+                            </div>
+                            <div class="status-description">
+                                Deep ocean currents transport vast amounts of heat and nutrients, 
+                                driving global climate regulation and marine ecosystem connectivity.
+                            </div>
+                        </div>
+                        
+                        <div class="journey-complete">
+                            <div class="journey-label">Journey Complete</div>
+                            <div class="journey-title">From Jet Stream to Ocean Depths</div>
+                            <div class="journey-distance">40,000 ft → 2,000 m below sea level</div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="section-header text-right">
+                            <div class="altitude-badge">Altitude: 2,000 m below surface</div>
+                            <h2 class="section-title">Deep Ocean Currents</h2>
+                            <p class="section-subtitle">
+                                The hidden engines of our planet's climate system, circulating heat, nutrients, and life across ocean basins in a continuous global dance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <h3 class="footer-title">Data Sources</h3>
+                    <div class="sources-grid">
+                        <div class="source">
+                            <div class="source-title primary">Atmospheric Data</div>
+                            <div class="source-description">NOAA, European Centre for Medium-Range Weather Forecasts</div>
+                        </div>
+                        <div class="source">
+                            <div class="source-title accent">Oceanic Data</div>
+                            <div class="source-description">Global Ocean Observing System, Argo Float Network</div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p class="footer-brand">BluePulse</p>
+                        <p class="footer-tagline">
+                            Connecting atmospheric and oceanic systems through immersive data visualization
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
